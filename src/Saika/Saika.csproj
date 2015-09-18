@@ -50,6 +50,18 @@
       <HintPath>..\packages\Nancy.Hosting.Aspnet.1.2.0\lib\net40\Nancy.Hosting.Aspnet.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Simple.Data, Version=0.19.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Simple.Data.Core.0.19.0.0\lib\net40\Simple.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Simple.Data.Ado, Version=0.19.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Simple.Data.Ado.0.19.0.0\lib\net40\Simple.Data.Ado.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Simple.Data.SqlServer, Version=0.19.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Simple.Data.SqlServer.0.19.0.0\lib\net40\Simple.Data.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web" />
@@ -57,11 +69,29 @@
     <Reference Include="System.Configuration" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Webfonts\Overpass-Bold.css" />
+    <Content Include="Content\Webfonts\Overpass-Bold.svg" />
+    <Content Include="Content\Webfonts\Overpass-BoldItalic.css" />
+    <Content Include="Content\Webfonts\Overpass-BoldItalic.svg" />
+    <Content Include="Content\Webfonts\Overpass-ExtraLight.css" />
+    <Content Include="Content\Webfonts\Overpass-ExtraLight.svg" />
+    <Content Include="Content\Webfonts\Overpass-ExtraLightItalic.css" />
+    <Content Include="Content\Webfonts\Overpass-ExtraLightItalic.svg" />
+    <Content Include="Content\Webfonts\Overpass-Italic.css" />
+    <Content Include="Content\Webfonts\Overpass-Italic.svg" />
+    <Content Include="Content\Webfonts\Overpass-Light.css" />
+    <Content Include="Content\Webfonts\Overpass-Light.svg" />
+    <Content Include="Content\Webfonts\Overpass-LightItalic.css" />
+    <Content Include="Content\Webfonts\Overpass-LightItalic.svg" />
+    <Content Include="Content\Webfonts\Overpass-Reg.css" />
+    <Content Include="Content\Webfonts\Overpass-Reg.svg" />
+    <Content Include="Content\Webfonts\recommended.css" />
     <Content Include="icon.png" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bootstrapper.cs" />
+    <Compile Include="Models\Vulnerabilities.cs" />
     <Compile Include="Modules\IndexModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -70,6 +100,32 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="packages.config" />
+    <Content Include="Content\Webfonts\Overpass-Bold.eot" />
+    <Content Include="Content\Webfonts\Overpass-Bold.ttf" />
+    <Content Include="Content\Webfonts\Overpass-Bold.woff" />
+    <Content Include="Content\Webfonts\Overpass-BoldItalic.eot" />
+    <Content Include="Content\Webfonts\Overpass-BoldItalic.ttf" />
+    <Content Include="Content\Webfonts\Overpass-BoldItalic.woff" />
+    <Content Include="Content\Webfonts\Overpass-ExtraLight.eot" />
+    <Content Include="Content\Webfonts\Overpass-ExtraLight.ttf" />
+    <Content Include="Content\Webfonts\Overpass-ExtraLight.woff" />
+    <Content Include="Content\Webfonts\Overpass-ExtraLightItalic.eot" />
+    <Content Include="Content\Webfonts\Overpass-ExtraLightItalic.ttf" />
+    <Content Include="Content\Webfonts\Overpass-ExtraLightItalic.woff" />
+    <Content Include="Content\Webfonts\Overpass-Italic.eot" />
+    <Content Include="Content\Webfonts\Overpass-Italic.ttf" />
+    <Content Include="Content\Webfonts\Overpass-Italic.woff" />
+    <Content Include="Content\Webfonts\Overpass-Light.eot" />
+    <Content Include="Content\Webfonts\Overpass-Light.ttf" />
+    <Content Include="Content\Webfonts\Overpass-Light.woff" />
+    <Content Include="Content\Webfonts\Overpass-LightItalic.eot" />
+    <Content Include="Content\Webfonts\Overpass-LightItalic.ttf" />
+    <Content Include="Content\Webfonts\Overpass-LightItalic.woff" />
+    <Content Include="Content\Webfonts\Overpass-Reg.eot" />
+    <Content Include="Content\Webfonts\Overpass-Reg.ttf" />
+    <Content Include="Content\Webfonts\Overpass-Reg.woff" />
+    <Content Include="Views\layout.sshtml" />
+    <Content Include="Views\vulnerabilities\manage.sshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -77,9 +133,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Content\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

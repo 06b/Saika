@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Saika</title>
+    <link href="@Path['~/Content/Webfonts/Overpass-Light.css']" rel="stylesheet"/>
+    <link href="@Path['~/Content/Webfonts/Overpass-Bold.css']" rel="stylesheet"/>
+	<style type="text/css">
+
+		body {
+			text-align: center;
+		}
+
+        .hero{font-family: Overpass,"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, Tahoma, sans-serif;font-weight: normal;font-size: 50px;}
+
+        .info{ color: #607D8B;}
+        .acceptableRisk{ color: #8BC34A;}
+        .lowRisk{ color: #FFC107;}
+        .mediumRisk{ color: #FF9800;}
+        .highRisk{ color: #f44336;}
+        .criticalRisk.hero{color: #f44336;font-family: Overpass,"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, Tahoma, sans-serif;font-weight: bold;}
+
+	</style>
+
+</head>
+<body>
+<header>
+    <h1 class="hero info">Saika</h1>
+</header>
+@Section['Content'];
+<footer>
+    <small>*Flower by chinnan from the Noun Project</small>
+</footer>
+</body>
+</html>

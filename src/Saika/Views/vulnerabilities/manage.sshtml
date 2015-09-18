@@ -1,0 +1,27 @@
+﻿@Master['layout.sshtml']
+
+@Section['Content']
+<form action="~/api/vulnerabilities/add" method="POST">
+<label for="name">Name:</label>
+<input id="name" name="VulnerabilityName" maxlength="255" required/>
+
+<label for="notes">Notes:</label>
+<textarea id="notes" name="Notes"  placeholder="" required maxlength="500000" autocomplete="off"></textarea>
+
+<label for="attack">Attack Steps:</label>
+<textarea id="attack" name="Attack" placeholder="" required maxlength="500000" autocomplete="off"></textarea>
+
+<label for="description">Description:</label>
+<textarea id="description" name="Description" placeholder="" required maxlength="500000" autocomplete="off"></textarea>
+
+<label for="solution">Solution:</label>
+<textarea id="solution" name="Solution" placeholder="" required maxlength="500000" autocomplete="off"></textarea>
+
+<label for="references">References:</label>
+<textarea id="references" name="References" placeholder="" required maxlength="500000" autocomplete="off"></textarea>
+
+    @AntiForgeryToken
+
+    <input type="submit" value="Save"/>
+</form>
+@EndSection

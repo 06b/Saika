@@ -1,19 +1,5 @@
-﻿<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8" />
-    <title>Saika</title>
+﻿@Master['layout.sshtml']
 
-	<style type="text/css">
-
-		body {
-			text-align: center;
-		}
-
-	</style>
-
-</head>
-<body>
-	This view was rendered using the SuperSimpleViewEngine
-</body>
-</html>
+@Section['Content']
+<p><a href="~/vulnerability/new">Report New Vulnerability</a> </p>
+@EndSection

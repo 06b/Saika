@@ -1,4 +1,7 @@
 ﻿using Nancy;
+using Nancy.ModelBinding;
+using Nancy.Responses;
+using Saika.Models;
 
 namespace Saika.Modules
 {
@@ -6,9 +9,18 @@ namespace Saika.Modules
     {
         public IndexModule()
         {
-            Get["/"] = parameters =>
+            Get["/"] = parameters => View["index"];
+
+
+            Get["/vulnerability/"] = parameters => Response.AsRedirect("/vulnerability/new", RedirectResponse.RedirectType.Temporary);
+            Get["/vulnerability/new"] = parameters => View["vulnerabilities/manage"];
+
+            Post["/api/vulnerabilities/add"] = parameters =>
             {
-                return View["index"];
+
+                Vulnerabilities Vulnerability = this.Bind<Vulnerabilities>();
+
+                return HttpStatusCode.OK;
             };
         }
     }
