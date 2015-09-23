@@ -126,6 +126,7 @@
     <Content Include="Content\Webfonts\Overpass-Reg.woff" />
     <Content Include="Views\layout.sshtml" />
     <Content Include="Views\vulnerabilities\manage.sshtml" />
+    <Content Include="Content\Vulnerabilities\sample.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
